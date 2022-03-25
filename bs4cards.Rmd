@@ -1,0 +1,118 @@
+---
+title: "bs4cards"
+author: "Juan Ramirez JR"
+date: "3/24/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(bs4cards)
+```
+
+## Introduction
+"bs4cards" is a package that allows users to add "card" elements to their html document using "Bootstrap:" a CSS library that includes lots of pre-made ui elements for websites. A "Card" is a typically square box that contains information in it, such as a title/heading, text, and some sort of color or shading attached to it. this package is useful for people who want to add a little flair to their HTML documents or add Bootstrap to documents that are eventually intended for the web.  
+
+## Features and Basic Usage  
+Let's begin by downloading installing the bs4cards package by running the following:
+
+```{r cars, eval = FALSE}
+install.packages("bs4cards")
+library(bs4cards)
+```
+
+Here are a few use cases of the bs4card package:
+
+```{r, eval = FALSE}
+cards(
+  data,
+  title = NULL,
+  text = NULL,
+  image = NULL,
+  link = NULL,
+  footer = NULL,
+  header = NULL,
+  tags = NULL,
+  layout = "label-below",
+  width = 3,
+  spacing = 2,
+  breakpoint = 4,
+  label_colour = NULL,
+  border_colour = NULL,
+  border_width = 1,
+  border_radius = 3
+)
+```
+
+
+This function creates one single Bootstrap card with a few different parameters which change the appearance of he card on the screen. The attributes, according to the vignette, are as follows:
+
+```{r, eval = FALSE}
+data -> Data frame
+title -> Title for the card
+text -> Text for the card
+image -> Path to the card image
+link -> URL to link to from title and image
+footer -> Card footer
+header -> Card header
+tags -> Tags to be assigned to each card
+layout -> Card layout is a string, defaults to "label-below"
+width -> Card width is an integer between 1 and 5
+spacing -> Spacing between cards is an integer between 0 and 5
+breakpoint -> Number between 1 and 5, controlling label size on horizontal and inset layouts
+label_colour -> Colour applied to the card label (if NULL, colour inherits)
+border_colour ->  Colour applied to the card border (if NULL, colour inherits)
+border_width ->  Width of card border is an integer between 0 and 5
+border_radius -> Amount of rounding on card corners is an integer between 0 and 5
+```
+
+## Example  
+Here are some examples of a few different cards made with bs4cards!
+
+```{r}
+  cards(
+  data = NULL,
+  title = "STYLE 1",
+  text = "This is a red and blue card!",
+  width = 1,
+  spacing = 2,
+  breakpoint = 2,
+  label_colour = "red",
+  border_colour = "blue",
+  border_width = 2,
+  border_radius = 4
+  )
+```
+
+
+```{r}
+  cards(
+  data = NULL,
+  title = "STYLE 2",
+  text = "A Little Different This Time",
+  footer = "this is a footer",
+  header = "this is a header",
+  layout = "label-above",
+  width = 3,
+  spacing = 2,
+  breakpoint = 4,
+  border_width = 1,
+  border_radius = 3,
+  border_colour = "yellow"
+)
+```
+
+```{r}
+
+#example data frame
+j = c("Juan", "Ramirez")
+juanData = data.frame(j)
+
+  cards(
+  data = juanData,
+  title = "STYLE 3",
+  text = "This one has data and tags!",
+  tags = j,
+  layout = "label-below",
+)
+```
