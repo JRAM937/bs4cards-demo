@@ -2,7 +2,7 @@
 title: "bs4cards"
 author: "Juan Ramirez JR"
 date: "3/24/2022"
-output: html_document
+output: word_document
 ---
 
 ```{r setup, include=FALSE}
