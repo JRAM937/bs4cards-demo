@@ -103,16 +103,16 @@ Here are some examples of a few different cards made with bs4cards!
 ```
 
 ```{r}
-
-#example data frame
-j = c("Juan", "Ramirez")
-juanData = data.frame(j)
+myData <- data.frame (
+  Training = c("Strength", "Stamina", "Other"),
+  Pulse = c(100, 150, 120),
+  Duration = c(60, 30, 45)
+)
 
   cards(
-  data = juanData,
-  title = "STYLE 3",
-  text = "This one has data and tags!",
-  tags = j,
-  layout = "label-below",
-)
+    data = myData,
+    title = "STYLE 2",
+    text = Training,
+    layout = "label-above",
+  )
 ```
