@@ -271,33 +271,22 @@ border_radius -&gt; Amount of rounding on card corners is an integer between 0 a
 </div>
 </div>
 <pre class="r"><code>#example data frame
-j = c(&quot;Juan&quot;, &quot;Ramirez&quot;)
-juanData = data.frame(j)
+myData &lt;- data.frame(
+  name = &quot;Juan Ramirez&quot;,
+  class = &quot;Stat210&quot;
+)
 
-  cards(
-  data = juanData,
-  title = &quot;STYLE 3&quot;,
-  text = &quot;This one has data and tags!&quot;,
-  tags = j,
-  layout = &quot;label-below&quot;,
-)</code></pre>
+myData %&gt;% cards(
+    title = name,
+    text = class,
+  )</code></pre>
 <pre><code>## using &#39;label-only&#39; layout</code></pre>
 <div>
-<p>
-<button class="btn btn-primary" type="button" onClick="$(&#39;.bs4cards-blahblahblah&#39;).hide(400, &#39;swing&#39;);setTimeout(function() {$(&#39;.bs4cards-Juan&#39;).show(400, &#39;swing&#39;)}, 400);">Juan</button>
-<button class="btn btn-primary" type="button" onClick="$(&#39;.bs4cards-blahblahblah&#39;).hide(400, &#39;swing&#39;);setTimeout(function() {$(&#39;.bs4cards-Ramirez&#39;).show(400, &#39;swing&#39;)}, 400);">Ramirez</button>
-</p>
 <div class="row p-0 row-cols-1 row-cols-md-2 row-cols-lg-3" style="margin-left: -.2rem; margin-right: -.2rem; margin-top: 1rem; margin-bottom: 1rem; ">
-<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-Juan" style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
+<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
 <div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: inherits; border-style:solid; border-color:inherits; border-width:1px; border-radius: .6rem .6rem .6rem .6rem ;">
-<h5 class="card-title my-auto px-3 pt-3 pb-1">STYLE 3</h5>
-<p class="card-text my-auto px-3 pb-3 pt-1">This one has data and tags!</p>
-</div>
-</div>
-<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-Ramirez" style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
-<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: inherits; border-style:solid; border-color:inherits; border-width:1px; border-radius: .6rem .6rem .6rem .6rem ;">
-<h5 class="card-title my-auto px-3 pt-3 pb-1">STYLE 3</h5>
-<p class="card-text my-auto px-3 pb-3 pt-1">This one has data and tags!</p>
+<h5 class="card-title my-auto px-3 pt-3 pb-1">Juan Ramirez</h5>
+<p class="card-text my-auto px-3 pb-3 pt-1">Stat210</p>
 </div>
 </div>
 </div>
