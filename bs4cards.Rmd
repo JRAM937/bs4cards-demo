@@ -115,3 +115,8 @@ myData %>% cards(
     text = class,
   )
 ```
+
+## Other Information  
+To learn more about this package, visit the vignette for bs4cards. >https://cran.r-project.org/web/packages/bs4cards/bs4cards.pdf<  
+
+Another thing to note, the "4" in "bs4" stands for the version of bootstrap this package uses. Learn more about Bootstrap 4 here: >https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp<  
